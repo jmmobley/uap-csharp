@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <SignAssembly>true</SignAssembly>
+    <Authors>Jason Mobley</Authors>
+    <Company>Trivantech LLC.</Company>
+    <Description>A port of enemaerke UAParser for use in .net core.</Description>
+    <Copyright>Copyright 2017</Copyright>
+    <PackageLicenseUrl>https://github.com/jmmobley/uap-csharp/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/jmmobley/uap-csharp</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/jmmobley/uap-csharp</RepositoryUrl>
+    <PackageTags>UAParser .Net Core UserAgent Parsing</PackageTags>
+    <AssemblyOriginatorKeyFile>..\..\PublicKeyCore.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="..\..\uap-core\regexes.yaml" Link="regexes.yaml" />
+  </ItemGroup>
+
+</Project>

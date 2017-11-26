@@ -1,0 +1,44 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+
+    <IsPackable>false</IsPackable>
+
+    <ApplicationIcon />
+
+    <OutputType>Library</OutputType>
+
+    <StartupObject />
+
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>..\..\PublicKeyCore.snk</AssemblyOriginatorKeyFile>
+    
+  </PropertyGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="..\..\uap-core\regexes.yaml" Link="Regexes\regexes.yaml" />
+    <EmbeddedResource Include="..\..\uap-core\tests\test_device.yaml" Link="TestResources\test_device.yaml" />
+    <EmbeddedResource Include="..\..\uap-core\tests\test_os.yaml" Link="TestResources\test_os.yaml" />
+    <EmbeddedResource Include="..\..\uap-core\tests\test_ua.yaml" Link="TestResources\test_ua.yaml" />
+    <EmbeddedResource Include="..\..\uap-core\test_resources\additional_os_tests.yaml" Link="TestResources\additional_os_tests.yaml" />
+    <EmbeddedResource Include="..\..\uap-core\test_resources\firefox_user_agent_strings.yaml" Link="TestResources\firefox_user_agent_strings.yaml" />
+    <EmbeddedResource Include="..\..\uap-core\test_resources\pgts_browser_list-orig.yaml" Link="TestResources\pgts_browser_list-orig.yaml" />
+    <EmbeddedResource Include="..\..\uap-core\test_resources\pgts_browser_list.yaml" Link="TestResources\pgts_browser_list.yaml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="xunit" Version="2.3.1" />
+    <PackageReference Include="YamlDotNet.NetCore" Version="1.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\UAParserCore\UAParserCore.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Regexes\" />
+    <Folder Include="TestResources\" />
+  </ItemGroup>
+
+</Project>
